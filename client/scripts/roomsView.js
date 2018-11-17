@@ -11,17 +11,37 @@ var RoomsView = {
       var allData = data.results
       console.log("alldata", allData)
       for (var i = 0; i < allData.length; i++){
-        this.renderMessage(data.results[i])
+        // console.log("data.results[i]", data.results[0])
+        this.renderRoom(data.results[i].roomname)
       }
       
     });
   },
 
-  renderRoom: function() {
+  render: _.template(`
+        <option ><%- roomname %></option>
+        
+    `),
+
+  renderRoom: function(roomname) {
+
+    console.log("object roomname",roomname);
     if (roomname){ // if someone submits a form without a username or text it returns undefined. So if undefined don't render it.
-      var renderedMessage = MessageView.render(obj);
-      $(renderedMessage).appendTo('#rooms select');
+      var keyValue = {
+        roomname: roomname
+      }
+      console.log("keyValue", keyValue);
+      var renderedRoom = this.render(keyValue);
+      $(renderedRoom).appendTo(this.$select);
     }
-  }
+  },
+
+  // addRoom: function(){
+  //   $(this.$button).on('click', function() {
+  //     var selectedRoom = $('#rooms select option:selected').text();
+  //     alert('hello');
+  //     // $(this.$select).val();
+  //   })
+  // }
 
 };
