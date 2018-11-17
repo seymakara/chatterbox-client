@@ -9,7 +9,6 @@ var RoomsView = {
     Parse.readAll((data) => {
       // examine the response from the server request:
       var allData = data.results
-      console.log("alldata", allData)
       for (var i = 0; i < allData.length; i++){
         // console.log("data.results[i]", data.results[0])
         this.renderRoom(data.results[i].roomname)
@@ -25,12 +24,11 @@ var RoomsView = {
 
   renderRoom: function(roomname) {
 
-    console.log("object roomname",roomname);
     if (roomname){ // if someone submits a form without a username or text it returns undefined. So if undefined don't render it.
       var keyValue = {
         roomname: roomname
       }
-      console.log("keyValue", keyValue);
+
       var renderedRoom = this.render(keyValue);
       $(renderedRoom).appendTo(this.$select);
     }
