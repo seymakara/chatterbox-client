@@ -1,4 +1,2 @@
-var Friends = {
+var Friends = {};
 
-
-};
