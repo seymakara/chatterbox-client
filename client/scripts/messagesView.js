@@ -5,7 +5,9 @@ var MessagesView = {
   initialize: function() {
   },
 
-  render: function() {
+  renderMessage: function() {
+    // var sampleMessage = $('<div>Hi there</div>');
+    $(message).appendTo('#chats');
   }
 
 };
