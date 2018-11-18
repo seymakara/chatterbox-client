@@ -5,12 +5,6 @@ var MessagesView = {
   initialize: function() {
     var allData;
 
-    // $('form .submit').on('click', function() {
-    //   var text = $('#message').val();
-    //   console.log("text", text)
-    //   Parse.create({text: text});
-    // }),
-
 
     Parse.readAll((data) => {
       // examine the response from the server request:
@@ -20,6 +14,10 @@ var MessagesView = {
         this.renderMessage(data.results[i])
       }
     });
+
+    $('.username').on('click', function(){
+      Friends.toggleStatus();
+    })
   },
 
   renderMessage: function(obj) {
