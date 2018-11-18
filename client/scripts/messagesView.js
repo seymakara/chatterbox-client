@@ -5,6 +5,13 @@ var MessagesView = {
   initialize: function() {
     var allData;
 
+    // $('form .submit').on('click', function() {
+    //   var text = $('#message').val();
+    //   console.log("text", text)
+    //   Parse.create({text: text});
+    // }),
+
+
     Parse.readAll((data) => {
       // examine the response from the server request:
       var allData = data.results
@@ -12,9 +19,7 @@ var MessagesView = {
       for (var i = 0; i < allData.length; i++){
         this.renderMessage(data.results[i])
       }
-      
     });
-    
   },
 
   renderMessage: function(obj) {

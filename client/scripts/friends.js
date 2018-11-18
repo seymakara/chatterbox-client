@@ -1,2 +1,10 @@
-var Friends = {};
+var Friends = {
+  toggleStatus: function() {
+    
+  }
+  /*
+
+
+  */
+};
 

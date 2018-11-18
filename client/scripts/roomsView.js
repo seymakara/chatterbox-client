@@ -6,6 +6,12 @@ var RoomsView = {
   initialize: function() {
     var allData;
 
+    $('#rooms button').on('click', function() {
+      var room = window.prompt("Enter in a room"); 
+      Rooms.add(room);
+    }),
+
+
     Parse.readAll((data) => {
       // examine the response from the server request:
       var allData = data.results
@@ -15,7 +21,10 @@ var RoomsView = {
       }
       
     });
+
+
   },
+
 
   render: _.template(`
         <option ><%- roomname %></option>

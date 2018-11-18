@@ -1,17 +1,14 @@
-$( document ).ready(function() {
+// $( document ).ready(function() {
 
 
 /*/////////////////////////////////////////
 Roomview functions
 /////////////////////////////////////////*/
 
-$('#addRoom-btn').on('click', function() {
-  //Grab the value of the room that was selected
-  // var selected = $('#dropdown-menu option:selected').html();
-  // console.log(selected);
-  Parse.create({username: "seyma", text: "hello!!!!!!!!!!!!!!", roomname: "GALVANIZE!!!!!!!!"})
-  // window.prompt("Enter in a room");
-})
+  // $('#rooms button').on('click', function() {
+  //   var room = window.prompt("Enter in a room");
+  //   Rooms.add(room);
+  // }),
 
 
 
@@ -19,7 +16,10 @@ $('#addRoom-btn').on('click', function() {
 Messageview functions
 /////////////////////////////////////////*/
 
-
+// $('form .submit').on('click', function() {
+//     var text = $('form #message');
+//     Messages.add(text);
+//   }),
 
 
 /*/////////////////////////////////////////
@@ -27,4 +27,4 @@ Friend functions
 /////////////////////////////////////////*/
 
 
-});
+// });

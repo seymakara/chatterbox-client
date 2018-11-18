@@ -1,5 +1,6 @@
 var Rooms = {
-  add: function() {
-     
+
+  add: function(room) {
+     Parse.create({roomname: room})
   }
 };
